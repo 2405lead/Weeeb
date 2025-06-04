@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pet Adoption Website</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="header-content">
+        <h1 id="mainTitle">Welcome to Pawfect!</h1>
+        <p>Your new best friend is just a few clicks away 🐶🐱</p>
+      </div>
+      <a href="login.html" class="login-btn" style="position: absolute; top: 20px; right: 20px;">Login / Register</a>
+      <button class="menu-toggle" id="sidebarToggle">☰</button>
+
+      <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+          <h3>Pawfect Menu</h3>
+          <button class="sidebar-close" id="sidebarClose">×</button>
+        </div>
+        <ul class="sidebar-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="adopt.html">Adopt a Pet</a></li>
+          <li><a href="pet-details.html">Pet Details</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="logic-tools.html">Logic Tools</a></li>
+          <li><a href="settings.html">Settings</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    </div>
+  </header>
+
+  <section>
+    <h2>About Our Project</h2>
+    <p>Pawfect is a user-friendly platform that connects kind humans with animals in need of a home.
+      We partner with shelters to help you easily browse available pets, read about their stories, and apply for adoption — all in one place.</p>
+    <h3>Key Features</h3>
+    <ul>
+      <li>Search and filter pets by breed, size, or age</li>
+      <li>View detailed pet profiles</li>
+      <li>Fill out an adoption form</li>
+      <li>Browse pets from trusted shelters</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Gallery</h2>
+    <img src="images/pet.jpg" alt="Adoptable dog" />
+  </section>
+
+  <section class="interactive-section">
+    <h2>Try Our Interactive Tools</h2>
+
+    <div class="interactive-box">
+      <button id="alertBtn" class="btn">Click Me</button>
+      <button id="randomBtn" class="btn">Get Random Number</button>
+      <div id="randomDisplay" class="output-box"></div>
+    </div>
+
+    <div class="interactive-box">
+      <h3>Favorite Pets</h3>
+      <ul id="petList" class="pet-list-box"></ul>
+      <button id="addPetBtn" class="btn">Add Pet</button>
+    </div>
+
+    <div class="interactive-box">
+      <h3>DOM Interactivity</h3>
+      <button id="revealBtn" class="btn">Show Message</button>
+      <button id="changeImgBtn" class="btn">Change Image</button>
+      <br><br>
+      <img id="mainImage" src="images/cat2.jpg" alt="Adoptable dog" width="200" />
+      <audio id="meowSound" src="meow.mp3"></audio>
+      <p class="pet-name">Pet name will appear here</p>
+      <p class="pet-age"></p>
+
+    </div>
+    
+
+  <p id="loginStatus"></p>
+
+  <script src="js/sidebar.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/jquery-script.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

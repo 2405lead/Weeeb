@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Adopt a Pet</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/modal.css" />
+</head>
+<body>
+
+<header>
+  <h1>Meet Your New Friend</h1>
+  <p>Choose from our lovely adoptable pets 🐾</p>
+  <a href="login.html" class="login-btn" style="position: absolute; top: 20px; right: 20px;">Login / Register</a>
+  <button class="menu-toggle" id="sidebarToggle">☰</button>
+
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <h3>Pawfect Menu</h3>
+      <button class="sidebar-close" id="sidebarClose">×</button>
+    </div>
+    <ul class="sidebar-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="adopt.html">Adopt a Pet</a></li>
+      <li><a href="pet-details.html">Pet Details</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="logic-tools.html">Logic Tools</a></li>
+    </ul>
+  </div>
+
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+</header>
+
+<section>
+  <h2>Available Pets</h2>
+  <p>Use filters to find the perfect companion for your home</p>
+
+  <div class="pets-grid">
+    <div class="pet-card">
+      <img src="images/dog1.jpg" alt="Aktos the dog" />
+      <h3>Aktos</h3>
+      <p>2-year-old Labrador, friendly & energetic</p>
+      <button type="button" class="btn adopt-btn" data-pet="Aktos">Adopt Me</button>
+
+    </div>
+    <div class="pet-card">
+      <img src="images/cat1.jpg" alt="Luna the cat" />
+      <h3>Luna</h3>
+      <p>1-year-old Siberian, gentle & playful</p>
+      <button type="button" class="btn adopt-btn" data-pet="Luna">Adopt Me</button>
+
+    </div>
+    <div class="pet-card">
+      <img src="images/rabbit1.jpg" alt="Koyan the rabbit" />
+      <h3>Koyan</h3>
+      <p>6-month-old Rabbit, sweet & cuddly</p>
+      <button type="button" class="btn adopt-btn" data-pet="Koyan">Adopt Me</button>
+
+    </div>
+  </div>
+</section>
+
+<div id="adoptionFormModal" class="modal hidden">
+  <div class="modal-content">
+    <span class="close-button" id="closeModal">×</span>
+    <h2>Заполните форму для усыновления</h2>
+    <form id="adoptionForm">
+      <input type="hidden" name="petName" id="petNameField" />
+      <label for="fullName">Ваше имя:</label>
+      <input type="text" id="fullName" name="fullName" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="phone">Телефон:</label>
+      <input type="tel" id="phone" name="phone" required />
+
+      <label for="message">Почему вы хотите усыновить?</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+
+      <button type="submit" class="btn">Отправить заявку</button>
+    </form>
+  </div>
+</div>
+
+<!-- Скрипты -->
+<script src="js/sidebar.js"></script>
+<script src="js/adopt-form.js"></script>
+
+</body>
+</html>

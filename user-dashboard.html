@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Dashboard</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>User Dashboard</h1>
+    <p>Track your favorites and applications 💼</p>
+    <button class="menu-toggle" id="sidebarToggle">☰</button>
+
+    <div class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h3>Pawfect Menu</h3>
+        <button class="sidebar-close" id="sidebarClose">×</button>
+      </div>
+      <ul class="sidebar-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="adopt.html">Adopt a Pet</a></li>
+        <li><a href="pet-details.html">Pet Details</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="logic-tools.html">Logic Tools</a></li>
+        <li><a href="settings.html">Settings</a></li>
+      </ul>
+    </div>
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+  </header>
+
+  <section>
+    <h2>Your Favorites</h2>
+    <ul class="pet-list">
+      <li class="pet-card">
+        <img src="images/cat1.jpg" alt="Luna the cat" />
+        <h3>Luna</h3>
+        <p>1-year-old Siamese</p>
+      </li>
+    </ul>
+
+    <h2>Submitted Applications</h2>
+    <p>You have submitted 1 application.</p>
+    <ul>
+      <li>Application for Aktos - Status: <strong>Pending</strong></li>
+    </ul>
+  </section>
+
+  <script src="js/sidebar.js"></script>
+  <script src="js/dashboard.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>
+

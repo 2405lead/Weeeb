@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Admin Dashboard</h1>
+    <p>Manage pet listings and user applications 🛠️</p>
+    <button class="menu-toggle" id="sidebarToggle">☰</button>
+
+    <div class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h3>Pawfect Menu</h3>
+        <button class="sidebar-close" id="sidebarClose">×</button>
+      </div>
+      <ul class="sidebar-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="adopt.html">Adopt a Pet</a></li>
+        <li><a href="pet-details.html">Pet Details</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="logic-tools.html">Logic Tools</a></li>
+        <li><a href="settings.html">Settings</a></li>
+      </ul>
+    </div>
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+  </header>
+
+  <section>
+    <h2>Pet Listings</h2>
+    <table class="admin-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Breed</th>
+          <th>Age</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Aktos</td>
+          <td>Labrador</td>
+          <td>2</td>
+          <td>Available</td>
+          <td><button class="btn">Edit</button> <button class="btn danger">Remove</button></td>
+        </tr>
+        <tr>
+          <td>Luna</td>
+          <td>Siberian</td>
+          <td>1</td>
+          <td>Adopted</td>
+          <td><button class="btn">Edit</button> <button class="btn danger">Remove</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Pending Applications</h2>
+    <ul class="admin-list" id="applicationsList"></ul>
+      <li><strong>John Doe</strong> applied to adopt <em>Aktos</em> — <button class="btn">Approve</button> <button class="btn danger">Reject</button></li>
+      <li><strong>Jane Smith</strong> applied to adopt <em>Luna</em> — <button class="btn">Approve</button> <button class="btn danger">Reject</button></li>
+    </ul>
+  </section>
+  <script>
+    const list = document.getElementById('applicationsList');
+    const apps = JSON.parse(localStorage.getItem('adoptionApplications') || '[]');
+  
+    if (apps.length === 0) {
+      list.innerHTML = '<li>Нет новых заявок</li>';
+    } else {
+      apps.forEach(app => {
+        const li = document.createElement('li');
+        li.innerHTML = `<strong>${app.fullName}</strong> хочет усыновить <em>${app.petName}</em> —
+          <button class="btn">Одобрить</button>
+          <button class="btn danger">Отклонить</button>`;
+        list.appendChild(li);
+      });
+    }
+  </script>
+  
+  <script src="js/sidebar.js"></script>
+  <script src="js/dashboard.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

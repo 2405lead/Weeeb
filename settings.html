@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Settings</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Settings</h1>
+    <p>Manage your preferences and logout</p>
+    <button class="menu-toggle" id="sidebarToggle">☰</button>
+
+    <div class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h3>Pawfect Menu</h3>
+        <button class="sidebar-close" id="sidebarClose">×</button>
+      </div>
+      <ul class="sidebar-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="adopt.html">Adopt a Pet</a></li>
+        <li><a href="pet-details.html">Pet Details</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="logic-tools.html">Logic Tools</a></li>
+        <li><a href="settings.html" class="active">Settings</a></li>
+      </ul>
+    </div>
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+  </header>
+
+  <section>
+    <h2>Account Settings</h2>
+    <button onclick="logout()" class="btn danger">Logout</button>
+  </section>
+
+  <script src="js/sidebar.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

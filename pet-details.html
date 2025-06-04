@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pet Details</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<header>
+  <h1>Meet Buddy</h1>
+  <p>Find out more about your future best friend 🐾</p>
+  <a href="login.html" class="login-btn" style="position: absolute; top: 20px; right: 20px;">Login / Register</a>
+  <button class="menu-toggle" id="sidebarToggle">☰</button>
+
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <h3>Pawfect Menu</h3>
+      <button class="sidebar-close" id="sidebarClose">×</button>
+    </div>
+    <ul class="sidebar-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="adopt.html">Adopt a Pet</a></li>
+      <li><a href="pet-details.html" class="active">Pet Details</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="logic-tools.html">Logic Tools</a></li>
+      <li><a href="settings.html">Settings</a></li>
+    </ul>
+  </div>
+
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+</header>
+
+<section class="pet-details-section">
+  <img src="images/dog1.jpg" alt="Aktos the dog" class="pet-detail-img" />
+  <article class="pet-info">
+    <h2>Aktos</h2>
+    <p><strong>Breed:</strong> Labrador Retriever</p>
+    <p><strong>Age:</strong> 2 years</p>
+    <p><strong>Health:</strong> Vaccinated, Neutered</p>
+    <p><strong>Description:</strong> Aktos is a loyal and playful dog who loves people, gets along with kids, and enjoys running outside. Perfect for an active family!</p>
+    <a href="contact.html" class="btn">Contact Shelter</a>
+  </article>
+</section>
+
+<script src="js/sidebar.js"></script>
+</body>
+</html>
+
